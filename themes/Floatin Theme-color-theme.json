@@ -1,0 +1,574 @@
+{
+	"name": "Floatin Theme",
+	"type": "dark",
+	"colors": {
+		"editor.background": "#1e1e1e",
+		"editor.foreground": "#eeffff",
+		"activityBarBadge.background": "#00b7ff",
+		"sideBarTitle.foreground": "#bbbbbb"
+	},
+	"tokenColors": [
+		// -- Class, Inheritance
+		{
+			"name": "Class, Support",
+			"scope": [
+				"entity.name",
+				"support.type",
+				"support.class",
+				"support.orther.namespace.use.php",
+				"meta.use.php",
+				"support.other.namespace.php",
+				"markup.changed.git_gutter",
+				"support.type.sys-types",
+
+				"entity.other.inherited-class",
+
+				// e.g. csses .my-class
+				"entity.other.attribute-name.class",
+				// e.g. html's class
+				"entity.other.attribute-name.html",
+
+				// JSON Key - level 0
+				"source.json meta.structure.dictionary.json support.type.property-name.json",
+
+				// e.g. markdown's _slash_ in list item '- item'
+				"punctuation.definition.list.begin.markdown",
+
+				// e.g. markdown's link text part: '[link text](https://aa.com)'
+				"string.other.link.title.markdown"
+			],
+			"settings": {
+				"foreground": "#00b4eb"
+			}
+		},
+		{
+			"name": "Entity Types",
+			"scope": [
+				"support.type"
+			],
+			"settings": {
+				"foreground": "#0095eb"
+				// "foreground": "#B2CCD6"
+			}
+		},
+
+		// {
+		// 	"name": "Inherited Class",
+		// 	"scope": [
+		// 		"entity.other.inherited-class",
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#00ff0d"
+		// 	}
+		// },
+
+		// -- Rest of top level
+		{
+			"name": "Comment",
+			"scope": [
+				"comment",
+				"punctuation.definition.comment",
+
+				// "text.html.derivative", // html "text"
+			],
+			"settings": {
+				// "fontStyle": "italic",
+				"foreground": "#707070"
+			}
+		},
+		{
+			"name": "Variables, | Block Level Variables",
+			"scope": [
+				"variable",
+				"string constant.other.placeholder",
+
+				"meta.block variable.other",
+				"variable.parameter",
+
+				// e.g. rust's variable name
+				"source.rust",
+
+				// e.g. csses 'margin-top'
+				"source.css support.type.property-name",
+				"source.sass support.type.property-name",
+				"source.scss support.type.property-name",
+				"source.less support.type.property-name",
+				"source.stylus support.type.property-name",
+				"source.postcss support.type.property-name",
+
+				// JSON Key - level 2 (& +)
+				"source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
+
+				// e.g. markdown's '> i am quote'
+				"markup.quote",
+
+				// Markup - Italic
+				"markup.italic",
+
+				// Markup - Bold
+				"markup.bold",
+				"markup.bold string",
+
+				// Markup - Bold-Italic
+				"markup.bold markup.italic",
+				"markup.italic markup.bold",
+				"markup.quote markup.bold",
+				"markup.bold markup.italic string",
+				"markup.italic markup.bold string",
+				"markup.quote markup.bold string",
+			],
+			"settings": {
+				"foreground": "#b3e9ff"
+			}
+		},
+		{
+			"name": "Function, Special Method",
+			"scope": [
+				"entity.name.function",
+				"meta.function-call",
+				"variable.function",
+				"support.function",
+				"keyword.other.special-method",
+
+				// e.g. html tags
+				"entity.name.tag",
+				"meta.tag.sgml",
+				"markup.deleted.git_gutter",
+
+				// JSON Key - level 1
+				"source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
+
+				// Markdown/Markup headings
+				"markup.heading",
+				"markup.inserted.git_gutter",
+				"markdown.heading",
+
+				// For markdown heading's text part
+				"entity.name.section.markdown",
+			],
+			"settings": {
+				"foreground": "#65d3ff"
+			}
+		},
+		{
+			"name": "Keyword, Storage. | 'private/public'",
+			"scope": [
+				"keyword",
+				"storage.type",
+				"storage.modifier",
+
+				"keyword.other.fn.rust", // rust: 'fn'
+			],
+			"settings": {
+				"foreground": "#b3b3b3"
+			}
+		},
+		{
+			"name": "Operator, Misc. | brackets, dots, 'return'",
+			"scope": [
+				// "keyword.control", // 'return' & 'if'
+				"constant.other.color",
+
+				// e.g. variable & function dot seperator 'var1.func1()'
+				"punctuation.accessor",
+				// e.g. html's '"tester"' inside element
+				// "punctuation.definition",
+
+				// TODO are these needed?
+				// "meta.tag",
+				// "punctuation.definition.tag",
+				// "punctuation.separator.inheritance.php",
+				// "punctuation.section.embedded",
+				// "keyword.other.template",
+				// "keyword.other.substitution",
+			],
+			"settings": {
+				"foreground": "#cccccc"
+			}
+		},
+		{
+			"name": "Language methods, | e.g. 'this'",
+			"scope": [
+				"variable.language",
+
+				// e.g. html's '<' & '>'
+				"punctuation.definition.tag.html",
+				"punctuation.definition.tag.begin.html",
+				"punctuation.definition.tag.end.html",
+			],
+			"settings": {
+				// "fontStyle": "italic",
+				"foreground": "#707070"
+			}
+		},
+		{
+			"name": "Boolean",
+			"scope": [
+				"constant.language",
+				"support.constant",
+				"constant.character",
+				"constant.escape",
+
+				// e.g. links in markdown '[link text](https://link.net)'
+				"markup.underline"
+			],
+			"settings": {
+				"foreground": "#ffa76d"
+			}
+		},
+
+		// {
+		// 	"name": "Constant, Function Argument, Tag Attribute, Embedded,",
+		// 	"scope": [
+		// 		// e.g. rust's 'let' // Add to 'private'?
+		// 		"keyword.other.unit",
+		// 		"keyword.other"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#ffa76d"
+		// 	}
+		// },
+		{
+			"name": "Number",
+			"scope": [
+				"constant.numeric",
+			],
+			"settings": {
+				"foreground": "#ff8f6d"
+			}
+		},
+		{
+			"name": "String, Symbols, Markup Heading, 'string quotes'",
+			"scope": [
+				"string",
+				"constant.other.symbol",
+				"constant.other.key",
+				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
+
+				"punctuation.definition.string.begin.ts",
+				"punctuation.definition.string.end.ts"
+			],
+			"settings": {
+				"foreground": "#ffc16f"
+			}
+		},
+
+		// --
+
+		{
+			"name": "Colors",
+			"scope": [
+				"constant.other.color"
+			],
+			"settings": {
+				"foreground": "#ffffff"
+			}
+		},
+		{
+			"name": "Invalid",
+			"scope": [
+				"invalid",
+				"invalid.illegal"
+			],
+			"settings": {
+				"foreground": "#FF5370"
+			}
+		},
+		{
+			"name": "Other Variable, String Link",
+			"scope": [
+				"support.other.variable",
+				"string.other.link"
+			],
+			"settings": {
+				"foreground": "#f07178"
+			}
+		},
+		
+		// TODO what's this?
+		{
+			"name": "Sub-methods",
+			"scope": [
+				"entity.name.module.js",
+				"variable.import.parameter.js",
+				"variable.other.class.js"
+			],
+			"settings": {
+				"foreground": "#FF5370"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "entity.name.method.js",
+			"scope": [
+				"entity.name.method.js"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#82AAFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "meta.method.js",
+			"scope": [
+				"meta.class-method.js entity.name.function.js",
+				"variable.function.constructor"
+			],
+			"settings": {
+				"foreground": "#82AAFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Attributes",
+			"scope": [
+				"entity.other.attribute-name"
+			],
+			"settings": {
+				"foreground": "#C792EA"
+			}
+		},
+		{
+			"name": "HTML Attributes",
+			"scope": [
+				"text.html.basic entity.other.attribute-name.html",
+				"text.html.basic entity.other.attribute-name"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ff00ea"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "CSS ID's",
+			"scope": [
+				"source.sass keyword.control"
+			],
+			"settings": {
+				"foreground": "#82AAFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Inserted",
+			"scope": [
+				"markup.inserted"
+			],
+			"settings": {
+				"foreground": "#C3E88D"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Deleted",
+			"scope": [
+				"markup.deleted"
+			],
+			"settings": {
+				"foreground": "#FF5370"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Changed",
+			"scope": [
+				"markup.changed"
+			],
+			"settings": {
+				"foreground": "#C792EA"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Regular Expressions",
+			"scope": [
+				"string.regexp"
+			],
+			"settings": {
+				"foreground": "#89DDFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Escape Characters",
+			"scope": [
+				"constant.character.escape"
+			],
+			"settings": {
+				"foreground": "#89DDFF"
+			}
+		},
+
+		{
+			"name": "URL",
+			"scope": [
+				"*url*",
+				"*link*",
+				"*uri*"
+			],
+			"settings": {
+				"fontStyle": "underline"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Decorators",
+			"scope": [
+				"tag.decorator.js entity.name.tag.js",
+				"tag.decorator.js punctuation.definition.tag.js"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#82AAFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "ES7 Bind Operator",
+			"scope": [
+				"source.js constant.other.object.key.js string.unquoted.label.js"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#FF5370"
+			}
+		},
+
+		{
+			"name": "Markdown - Plain",
+			"scope": [
+				// Markdown basic text
+				"text.html.markdown",
+				"punctuation.definition.list_item.markdown"
+			],
+			"settings": {
+				"foreground": "#EEFFFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Markup Raw Inline",
+			"scope": [
+				"text.html.markdown markup.inline.raw.markdown"
+			],
+			"settings": {
+				"foreground": "#C792EA"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Markup Raw Inline Punctuation",
+			"scope": [
+				"text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
+			],
+			"settings": {
+				"foreground": "#65737E"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Blockquote",
+			"scope": [
+				"markup.quote punctuation.definition.blockquote.markdown"
+			],
+			"settings": {
+				"foreground": "#65737E"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Link Description",
+			"scope": [
+				"string.other.link.description.title.markdown"
+			],
+			"settings": {
+				"foreground": "#C792EA"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Link Anchor",
+			"scope": [
+				"constant.other.reference.link.markdown"
+			],
+			"settings": {
+				"foreground": "#FFCB6B"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markup - Raw Block",
+			"scope": [
+				"markup.raw.block"
+			],
+			"settings": {
+				"foreground": "#C792EA"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Raw Block Fenced",
+			"scope": [
+				"markup.raw.block.fenced.markdown"
+			],
+			"settings": {
+				"foreground": "#00000050"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Fenced Bode Block",
+			"scope": [
+				"punctuation.definition.fenced.markdown"
+			],
+			"settings": {
+				"foreground": "#00000050"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Fenced Bode Block Variable",
+			"scope": [
+				"markup.raw.block.fenced.markdown",
+				"variable.language.fenced.markdown",
+				"punctuation.section.class.end"
+			],
+			"settings": {
+				"foreground": "#EEFFFF"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Fenced Language",
+			"scope": [
+				"variable.language.fenced.markdown"
+			],
+			"settings": {
+				"foreground": "#65737E"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markdown - Separator",
+			"scope": [
+				"meta.separator"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#65737E"
+			}
+		},
+		// TODO what's this?
+		{
+			"name": "Markup - Table",
+			"scope": [
+				"markup.table"
+			],
+			"settings": {
+				"foreground": "#EEFFFF"
+			}
+		}
+	]
+}
