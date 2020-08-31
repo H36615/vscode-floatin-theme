@@ -232,6 +232,15 @@
 			"name": "Number",
 			"scope": [
 				"constant.numeric",
+
+				// e.g. '\n'
+				"constant.character.escape",
+
+				// "Main" regex
+				"string.regexp.ts",
+
+				// e.g. Regex's '?'
+				"keyword.operator.quantifier.regexp",
 			],
 			"settings": {
 				"foreground": "#ff8f6d"
@@ -246,7 +255,10 @@
 				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
 
 				"punctuation.definition.string.begin.ts",
-				"punctuation.definition.string.end.ts"
+				"punctuation.definition.string.end.ts",
+
+				// e.g. regex's '[' & ']'
+				"punctuation.definition.character-class.regexp"
 			],
 			"settings": {
 				"foreground": "#ffc16f"
@@ -274,6 +286,8 @@
 				"foreground": "#FF5370"
 			}
 		},
+		
+		// TODO what's this?
 		{
 			"name": "Other Variable, String Link",
 			"scope": [
@@ -284,7 +298,6 @@
 				"foreground": "#f07178"
 			}
 		},
-		
 		// TODO what's this?
 		{
 			"name": "Sub-methods",
@@ -390,17 +403,6 @@
 				"foreground": "#89DDFF"
 			}
 		},
-		// TODO what's this?
-		{
-			"name": "Escape Characters",
-			"scope": [
-				"constant.character.escape"
-			],
-			"settings": {
-				"foreground": "#89DDFF"
-			}
-		},
-
 		{
 			"name": "URL",
 			"scope": [
