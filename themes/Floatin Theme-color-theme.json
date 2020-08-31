@@ -35,7 +35,10 @@
 				"punctuation.definition.list.begin.markdown",
 
 				// e.g. markdown's link text part: '[link text](https://aa.com)'
-				"string.other.link.title.markdown"
+				"string.other.link.title.markdown",
+				
+				// e.g. React "html's" attribute: '<header myAttribute="attribute-value">'
+				"entity.other.attribute-name",
 			],
 			"settings": {
 				"foreground": "#00b4eb"
@@ -61,8 +64,6 @@
 		// 		"foreground": "#00ff0d"
 		// 	}
 		// },
-
-		// -- Rest of top level
 		{
 			"name": "Comment",
 			"scope": [
@@ -193,8 +194,8 @@
 
 				// e.g. html's '<' & '>'
 				"punctuation.definition.tag.html",
-				"punctuation.definition.tag.begin.html",
-				"punctuation.definition.tag.end.html",
+				"punctuation.definition.tag.begin",
+				"punctuation.definition.tag.end",
 			],
 			"settings": {
 				// "fontStyle": "italic",
@@ -332,16 +333,6 @@
 				"foreground": "#82AAFF"
 			}
 		},
-		// TODO what's this?
-		{
-			"name": "Attributes",
-			"scope": [
-				"entity.other.attribute-name"
-			],
-			"settings": {
-				"foreground": "#C792EA"
-			}
-		},
 		{
 			"name": "HTML Attributes",
 			"scope": [
@@ -415,17 +406,17 @@
 			}
 		},
 		// TODO what's this?
-		{
-			"name": "Decorators",
-			"scope": [
-				"tag.decorator.js entity.name.tag.js",
-				"tag.decorator.js punctuation.definition.tag.js"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#82AAFF"
-			}
-		},
+		// {
+		// 	"name": "Decorators",
+		// 	"scope": [
+		// 		"tag.decorator.js entity.name.tag.js",
+		// 		"tag.decorator.js punctuation.definition.tag.js"
+		// 	],
+		// 	"settings": {
+		// 		"fontStyle": "italic",
+		// 		"foreground": "#82AAFF"
+		// 	}
+		// },
 		// TODO what's this?
 		{
 			"name": "ES7 Bind Operator",
