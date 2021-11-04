@@ -23,6 +23,9 @@
 
         // Property name (.json: "key")
         "support.type.property-name",
+
+        // tag name (.yml: key)
+        "entity.name.tag",
       ],
       "settings": {
         "foreground": "#6b91b1"
@@ -153,13 +156,10 @@
       }
     },
     {
-      "name": "CSS property value. Regular expression groups.",
+      "name": "",
       "scope": [
         // String
         "string",
-
-        // (undefined)
-        "constant.language"
         
         // Copied
         // "support.constant.property-value",
@@ -181,6 +181,29 @@
       ],
       "settings": {
         "foreground": "#65eaf3" // was same as semanticTokenColors.stringLiteral
+      }
+    },
+    {
+      "name": "",
+      "scope": [
+        // boolean (true), (undefined)
+        "constant.language",
+
+        // Enum value (MyEnum.myValue)
+        "variable.other.enummember"
+      ],
+      "settings": {
+        "foreground": "#8bf7e5"
+      }
+    },
+    {
+      "name": "",
+      "scope": [
+        // number (123)
+        "constant.numeric",
+      ],
+      "settings": {
+        "foreground": "#7cf196"
       }
     },
     
