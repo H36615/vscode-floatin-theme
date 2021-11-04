@@ -1,0 +1,213 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "Floatin Theme",
+	"type": "dark",
+	"colors": {
+		"editor.background": "#1e1e1e",
+		"editor.foreground": "#eeffff",
+		"activityBarBadge.background": "#00b7ff",
+		"sideBarTitle.foreground": "#bbbbbb"
+	},
+	"tokenColors": [
+		{
+			"name": "==== 1 ====",
+			"scope": [
+				// e.g. type in 'foo(): T<type>'
+				"support.type",
+
+				// e.g. html tag
+				"entity.name.tag",
+			],
+			"settings": {
+				"foreground": "#448fff"
+			}
+		},
+		{
+			"name": "==== 2 ====",
+			"scope": [
+				"entity.name.type",
+				"entity.other.inherited-class",
+			],
+			"settings": {
+				"foreground": "#448fff"
+			}
+		},
+		{
+			"name": "==== 3 ====",
+			"scope": [
+				// Function name
+				"entity.name.function",
+				// "meta.function-call",
+				"variable.function",
+				"support.function",
+				"keyword.other.special-method",
+
+				// JSON Key - level 1
+				"source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json",
+
+				// Markdown/Markup headings
+				"markup.heading",
+				"markup.inserted.git_gutter",
+				"markdown.heading",
+
+				// For markdown heading's text part
+				"entity.name.section.markdown",
+
+				"entity.other.attribute-name",
+			],
+			"settings": {
+				"foreground": "#91bdff"
+			}
+		},
+		{
+			"name": "==== 4 ====",
+			"scope": [
+				"variable",
+
+				// e.g. key in object '{ key: value }'
+				"meta.object-literal.key",
+				// e.g. markdown quote '> i am quote'
+				"markup.quote",
+			],
+			"settings": {
+				"foreground": "#aeceff"
+			}
+		},
+		{
+			"name": "==== X ====",
+			"scope": [
+				"source",
+				// 'return' & 'if'
+				"keyword.control",
+				// e.g. variable & function dot seperator 'var1.func1()'
+				"punctuation.accessor",
+				// e.g. {} ()
+				// "meta.type",
+				"meta.parameters",
+
+				"meta.return",
+				"meta.class",
+			],
+			"settings": {
+				"foreground": "#cccccc"
+			}
+		},
+		{
+			"name": "==== Y ====",
+			"scope": [
+				"comment",
+				"comment.line.double-slash",
+
+				// e.g. html's '<' & '>'
+				"punctuation.definition.tag",
+			],
+			"settings": {
+				"foreground": "#7a7a7a"
+			}
+		},
+		{
+			"name": "==== A ====",
+			"scope": [
+				"constant.numeric",
+				// e.g. '\n'
+				"constant.character.escape",
+				// "Main" regex
+				"string.regexp",
+				// // e.g. Regex's '?'
+				// "keyword.operator.quantifier.regexp",
+			],
+			"settings": {
+				"foreground": "#ff726d"
+			}
+		},
+		{
+			"name": "==== B ====",
+			"scope": [
+				// e.g. 'true'
+				"constant.language",
+
+				"constant.escape",
+				// e.g. links in markdown '[link text](https://link.net)'
+				"markup.underline"
+			],
+			"settings": {
+				"foreground": "#ff8a6d"
+			}
+		},
+		{
+			"name": "==== C ====",
+			"scope": [
+				"string",
+
+				// e.g. regex's '[' & ']'
+				// "punctuation.definition.character-class.regexp"
+			],
+			"settings": {
+				"foreground": "#ffa46f"
+			}
+		},
+
+		// {
+		// 	"name": "Language methods, | e.g. 'this'",
+		// 	"scope": [
+		// 		"variable.language",
+
+				
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#707070"
+		// 	}
+		// },
+		
+
+		// {
+		// 	"name": "Keyword, Storage. | 'private/public'",
+		// 	"scope": [
+		// 		"keyword",
+		// 		"storage.type",
+		// 		"storage.modifier",
+
+		// 		"keyword.other.fn.rust", // rust: 'fn'
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#b3b3b3"
+		// 	}
+		// },
+
+		// {
+		// 	"name": "Constant, Function Argument, Tag Attribute, Embedded,",
+		// 	"scope": [
+		// 		// e.g. rust's 'let' // Add to 'private'?
+		// 		"keyword.other.unit",
+		// 		"keyword.other"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#ffa76d"
+		// 	}
+		// },
+
+		
+
+		// --
+
+		// {
+		// 	"name": "Colors",
+		// 	"scope": [
+		// 		"constant.other.color"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#ffffff"
+		// 	}
+		// },
+		// {
+		// 	"name": "Invalid",
+		// 	"scope": [
+		// 		"invalid",
+		// 		"invalid.illegal"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#ff5353"
+		// 	}
+		// },
+	]
+}
