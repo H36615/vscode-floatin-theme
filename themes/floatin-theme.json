@@ -4,7 +4,7 @@
   "type": "dark",
   "colors": {
     "editor.background": "#181818",
-    "editor.foreground": "#adadad",
+    "editor.foreground": "#b1b1b1",
     "sideBar.background": "#1d1d1d",
     "activityBar.background": "#181818",
     "activityBarBadge.background": "#65eaf3",
@@ -37,6 +37,9 @@
         // (return, export, import)
         "keyword.control",
 
+        // html attribute
+        "entity.other.attribute-name",
+
         // Copied
         // "source.cpp keyword.operator.new",
         // "keyword.operator.delete",
@@ -45,7 +48,7 @@
         // "entity.name.operator"
       ],
       "settings": {
-        "foreground": "#6093a7" // was same as semanticTokenColors.newOperator
+        "foreground": "#5b919e" // was same as semanticTokenColors.newOperator
       }
     },
     {
@@ -152,7 +155,7 @@
         // "constant.other.placeholder", // placeholders in strings
       ],
       "settings": {
-        "foreground": "#e0e0e0" // TODO blend with main foreground?
+        "foreground": "#e6e6e6" // TODO blend with main foreground?
       }
     },
     {
