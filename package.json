@@ -1,20 +1,27 @@
 {
     "name": "floatin-theme",
-    "displayName": "Floatin Theme",
-    "description": "Floatin Theme",
-    "version": "0.0.1",
+    "displayName": "%displayName%",
+    "description": "%description%",
+    "version": "0.0.2",
     "engines": {
-        "vscode": "^1.48.0"
-    },
+        "vscode": "*"
+      },
     "categories": [
         "Themes"
     ],
     "contributes": {
         "themes": [
             {
+                "id": "Floatin Theme",
                 "label": "Floatin Theme",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Floatin Theme-color-theme.json"
+                "path": "./themes/floatin-theme.json"
+            },
+            {
+                "id": "Floatin WIP",
+                "label": "Floatin WIP",
+                "uiTheme": "vs-dark",
+                "path": "./themes/floatin-wip.json"
             }
         ]
     }
